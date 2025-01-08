@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <script src="main.js" defer>
+            
+        </script>
+        <link rel="stylesheet"  href="style.css">
+    </head>
+    <body>
+        <div><p style="font-size: smaller; color: white; opacity: 0.5; font-family: Arial, Helvetica, sans-serif; text-align: center;">Karty wykoane przez dani maccari | czcionka wykonana przez Daniela Linssena  </p></div>
+        <h1 id="message">HELLO</h1> 
+        <div id="dealer"class="cards"><img src="karty/back.png" alt="reverse" id="back"></div>
+        <div id="player"class="cards"></div>
+        <div id="buttons">
+            <button class="b" onclick="hit()">HIT</button>
+            <button class="b" onclick="stand()">STAND</button>
+
+            <div class="bind">
+                <button class="bb"onclick="minus()">-</button>     
+                <p id="kasa">0/100</p>
+                <button class="bb" onclick="plus()">+</button>     
+            </div>
+            
+        </div>
+    </body>
+</html>
