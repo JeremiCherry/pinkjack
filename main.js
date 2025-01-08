@@ -235,7 +235,7 @@ function check_win() {
     }
     if (player_win == true) {
         message.innerText = "Player Won!";
-        hajs += (bet * payout_value);
+        hajs += Math.floor(bet * payout_value);
         bet = 0;
         setTimeout(start_game, 2500);
     }
