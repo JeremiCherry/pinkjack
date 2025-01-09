@@ -226,14 +226,16 @@ window.onload = (_event) => {
 };
 function check_win() {
     if (player_stand && dealer_stand) {
-        if (player_points > dealer_points) {
+        if (player_points == dealer_points){
+            draw = true;
+        }
+        else if (player_points > dealer_points) {
             player_win = true;
         }
         else if (dealer_points > player_points) {
             dealer_win = true;
         }
-        else if (player_points == dealer_points)
-            draw = true;
+        
     }
     if (player_win == true) {
         message.innerText = "Player Won!";
