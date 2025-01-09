@@ -176,6 +176,7 @@ function dealer_turn() {
         dealer_hand.push(draw_card());
         display_card(dealer_hand[dealer_hand.length - 1], "dealer");
         dealer_points = count_cards(dealer_hand);
+        console.log(dealer_points)
     }
     if (dealer_points >= 17 && dealer_points < 21) {
         dealer_stand = true;
