@@ -200,6 +200,9 @@ function discard(cards) {
     }
 }
 function start_game() {
+    player_win=false
+    dealer_win=false
+    draw=false
     message.innerText = "PLACE YOUR BET!";
     if (player_hand.length > 1) {
         discard(player_hand);
