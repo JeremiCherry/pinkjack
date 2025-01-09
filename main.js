@@ -133,6 +133,7 @@ function count_cards(cards) {
 function hit() {
     if (bet == 0)
         return;
+    if(bet<10 && hajs>=10) return;
     if (can_bet) {
         can_bet = false;
     }
@@ -157,6 +158,7 @@ function hit() {
 function stand() {
     if (bet == 0)
         return;
+    if(bet<10 && hajs>=10) return;
     if (can_bet) {
         can_bet = false;
     }
