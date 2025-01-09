@@ -164,6 +164,11 @@ function stand() {
     }
     player_points = count_cards(player_hand);
     player_stand = true;
+    if(player_points==21){
+        player_win==true
+        check_win()
+        return
+    }
     dealer_turn();
 }
 function dealer_turn() {
@@ -235,10 +240,10 @@ function check_win() {
         if (player_points == dealer_points){
             draw = true;
         }
-        else if (player_points > dealer_points) {
+        else if (player_points > dealer_points && player_points<=21) {
             player_win = true;
         }
-        else if (dealer_points > player_points) {
+        else if (dealer_points > player_points &&dealer_points<=21) {
             dealer_win = true;
         }
         
@@ -247,18 +252,18 @@ function check_win() {
         message.innerText = "Player Won!";
         hajs += Math.floor(bet * payout_value);
         bet = 0;
-        setTimeout(start_game, 2500);
+        setTimeout(start_game, 5000);
     }
     if (dealer_win == true) {
         message.innerText = "Dealer Won!";
         bet = 0;
-        setTimeout(start_game, 2500);
+        setTimeout(start_game, 5000);
     }
     if (draw == true) {
         message.innerText = "Draw!";
         hajs += bet;
         bet = 0;
-        setTimeout(start_game, 2500);
+        setTimeout(start_game, 5000);
     }
     console.log("player win: ", player_win," dealer win: ", dealer_win)
 }
