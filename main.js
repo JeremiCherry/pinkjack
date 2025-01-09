@@ -252,4 +252,5 @@ function check_win() {
         bet = 0;
         setTimeout(start_game, 2500);
     }
+    console.log("player win: ", player_win," dealer win: ", dealer_win)
 }
